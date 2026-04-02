@@ -20,6 +20,7 @@ def dowloads(youtube_url, format_type):
 
     ydl_opts = {
         'outtmpl': '%(title)s.%(ext)s',
+        'ffmpeg_location': './ffmpeg/ffmpeg.exe',
     }
 
     if format_type == "mp3" :
