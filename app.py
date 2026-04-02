@@ -29,7 +29,7 @@ def dowloads(youtube_url, format_type):
             'postprocessors': [{
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
-                'preferredquality': '192',
+                'preferredquality': '320',
             }],
         })
     elif format_type == "wav" :
