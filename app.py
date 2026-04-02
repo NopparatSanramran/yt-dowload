@@ -41,7 +41,13 @@ def dowloads(youtube_url, format_type):
             }],
         })
     elif format_type == "mp4" :
-        print("mp4")
+        ydl_opts.update({
+            'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+            'postprocessors': [{
+                'key': 'FFmpegVideoConvertor',
+                'preferedformat': 'mp4',
+            }]
+        })
     else :
         print("invalid type")
     with yt_dlp.YoutubeDL(ydl_opts) as ydl :
